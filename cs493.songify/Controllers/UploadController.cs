@@ -17,7 +17,7 @@ namespace cs493.songify.Controllers
           }
 
           [HttpPost]
-          public async Task<IActionResult> UploadSong(String artist, String album, IFormFile fileupload, String genre)
+          public async Task<IActionResult> UploadSong(String artist, String album, IFormFile fileupload, String genre, String song)
           {
                String localPath = @"C:\Users\Ryan\Desktop\mp3s\";
                String filePath = localPath + fileupload.FileName;
@@ -29,7 +29,7 @@ namespace cs493.songify.Controllers
 
                String preSignedUrl = aws.LastFileUploadedUrl;
 
-               aws.InsertDynamoRecord(preSignedUrl,artist,album,genre,fileupload.FileName);
+               aws.InsertDynamoRecord(preSignedUrl,artist,album,genre,song);
 
 
                return RedirectToAction("Index", "Upload");
