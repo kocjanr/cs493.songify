@@ -1,0 +1,12 @@
+
+\.vs/
+
+cs493\.songify/bin/
+
+cs493\.songify/obj/
+
+cs493\.songify/Properties/
+
+cs493\.songify/appsettings\.Development\.json
+
+cs493\.songify/cs493\.songify\.csproj\.user

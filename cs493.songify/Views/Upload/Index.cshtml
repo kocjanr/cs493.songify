@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Upload</h2>
+
+
+@*<form method="post" action="/Upload/UploadSong">*@
+<form asp-controller="Upload" asp-action="UploadSong" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label>Artist</label>
+        <input type="text" class="form-control" name="artist">
+    </div>
+
+    <div class="form-group">
+        <label>Album</label>
+        <input type="text" class="form-control" name="album">
+    </div>
+
+    <div class="form-group">
+        <label>Genre</label>
+        <input type="text" class="form-control" name="genre">
+    </div>
+
+    <div class="form-group">
+        <input id="fileupload" name="fileupload" type="file" multiple />
+    </div>
+
+
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Upload Song</button>
+    </div>
+
+</form>
+
