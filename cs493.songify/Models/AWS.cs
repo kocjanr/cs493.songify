@@ -63,7 +63,7 @@ namespace cs493.songify.Models
                );
 
 
-               Table musicTable = Table.LoadTable(client, "Music");
+               Table musicTable = Table.LoadTable(client, "music");
 
                var song = new Document();
                song["Artist"] = artist;
